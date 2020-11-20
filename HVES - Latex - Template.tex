@@ -1,0 +1,120 @@
+%Compile with XeLaTeX
+
+
+\documentclass[12pt,a4paper,oneside]{memoir}
+\usepackage[utf8]{inputenc}
+\usepackage{background}
+\usepackage{lipsum}% just to generate filler text
+\usepackage{scrextend}
+\usepackage{graphicx}
+
+\usepackage[left=1.5cm,right=1.5cm,top=2cm,bottom=3cm]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage[section]{placeins}
+\usepackage{float}
+\usepackage{mathptmx}
+\usepackage{tocloft}
+\usepackage{setspace}
+\usepackage{pgfplots} %Histogram graphing
+\usepackage{titlesec} %Title spacing
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage{changepage}
+\usepackage{color,soul}
+\usepackage{xcolor}
+\usepackage{gensymb}
+
+\usepackage{lipsum}
+\setlength\headheight{35pt} % just to make warning go away. Adjust the value after looking into the warning.
+
+
+
+
+\pgfplotsset{
+  compat=newest,
+  xlabel near ticks,
+  ylabel near ticks
+}
+
+
+\SetBgContents{Prepared by Brady Planden, 2019}
+\SetBgScale{1}
+\SetBgAngle{0}
+\SetBgOpacity{1}
+\SetBgColor{black}
+\SetBgPosition{current page.south west}
+\SetBgHshift{4cm}
+\SetBgVshift{1cm}
+
+%\fancyhf{}
+\lhead{\includegraphics[width=5.25cm]{HVES_Logo.png}}
+%\renewcommand{\headrulewidth}{0.4pt}
+
+
+\mainmatter
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+
+
+\begin{document}
+\section*{Lab Research Aims}
+
+
+{The aims for the HVES research group at Oxford Brookes University are to develop capability for experimental testing across the automotive electrification field. Current capabilities of this group are limited to cell level testing of cylindrical and pouch cells, though a high precision cell cycler, potentiostat, and thermal chamber. As this group expands their capabilities, it is important to verify and review current trends in the field. At the moment, the UK has recently moved it's electric vehicle sales policy from 2040 to 2030. This is an important factor to consider as the field develops over the next century.\\}
+
+
+\begin{table}[H]
+  \centering
+  \captionsetup{aboveskip=0pt,font=it}
+  \caption{Pack Tester Required Specification}
+  \resizebox{0.6\textwidth}{!}{   %resize table
+    \begin{tabular}{cccc}
+    \toprule
+     DC Power & Maximum Voltage & Min Voltage & Voltage Accuracy \\
+     16 & 5.8 & 1.16 & 453 \\
+     20 & 6.9 & 0.96 & 453\\
+     25 & 7.2 & 0.743 & 453\\
+    \bottomrule
+    \end{tabular}
+    }
+    \end{table}
+
+
+    
+%----- Sample Figure ----------%
+% \begin{figure}[!htbp]
+% \centering
+% \includegraphics[width=\textwidth]{445N_IA.jpg}
+% \captionsetup{aboveskip=0pt,font=it}
+% \caption{16" @ 445N Fz / Varying IA / 12 PSI}
+% \label{Fig1}
+% \end{figure}
+
+
+
+
+
+%----- Sample Table ----------%
+%\begin{table}[H]
+%  \centering
+%  \captionsetup{aboveskip=0pt,font=it}
+%  \caption{Coroplast Characteristics}
+%  \resizebox{0.6\textwidth}{!}{   %resize table
+%    \begin{tabular}{cccc}
+%    \toprule
+%     \textbf{Cross Section [$mm^2$]} & \textbf{Diameter [mm]} & \textbf{Resistance [m\ohm/m]} & \textbf{Max Temperature [K]}\\
+%     16 & 5.8 & 1.16 & 453 \\
+%     20 & 6.9 & 0.96 & 453\\
+%     25 & 7.2 & 0.743 & 453\\
+%    \bottomrule
+%    \end{tabular}
+%    }
+%    \end{table}
+
+
+\end{document}
