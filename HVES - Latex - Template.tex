@@ -2,7 +2,7 @@
 
 
 \documentclass[12pt,a4paper,oneside]{memoir}
-\usepackage[utf8]{inputenc}
+\usepackage[OT1]{fontenc} 
 \usepackage{background}
 \usepackage{lipsum}% just to generate filler text
 \usepackage{scrextend}
@@ -28,11 +28,17 @@
 \usepackage{color,soul}
 \usepackage{xcolor}
 \usepackage{gensymb}
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage[flushleft]{threeparttable}
 
 \usepackage{lipsum}
-\setlength\headheight{35pt} % just to make warning go away. Adjust the value after looking into the warning.
+\setlength\headheight{35.5pt} % just to make warning go away. Adjust the value after looking into the warning.
 
 
+\newcolumntype{L}{>{\centering\arraybackslash}m{3cm}}
+\newcolumntype{J}{>{\centering\arraybackslash}p{5cm}}
+\newcommand{\rowgroup}[1]{\hspace{-1em}#1}
 
 
 \pgfplotsset{
@@ -42,7 +48,7 @@
 }
 
 
-\SetBgContents{Prepared by Brady Planden, 2019}
+\SetBgContents{Prepared by XXXX XXXXX, 202X}
 \SetBgScale{1}
 \SetBgAngle{0}
 \SetBgOpacity{1}
@@ -62,30 +68,13 @@
 
 
 \begin{document}
-\section*{Lab Research Aims}
+\section*{HVES Latex Template}
 
 
-{The aims for the HVES research group at Oxford Brookes University are to develop capability for experimental testing across the automotive electrification field. Current capabilities of this group are limited to cell level testing of cylindrical and pouch cells, though a high precision cell cycler, potentiostat, and thermal chamber. As this group expands their capabilities, it is important to verify and review current trends in the field. At the moment, the UK has recently moved it's electric vehicle sales policy from 2040 to 2030. This is an important factor to consider as the field develops over the next century.\\}
+\lipsum[2-4]
 
 
-\begin{table}[H]
-  \centering
-  \captionsetup{aboveskip=0pt,font=it}
-  \caption{Pack Tester Required Specification}
-  \resizebox{0.6\textwidth}{!}{   %resize table
-    \begin{tabular}{cccc}
-    \toprule
-     DC Power & Maximum Voltage & Min Voltage & Voltage Accuracy \\
-     16 & 5.8 & 1.16 & 453 \\
-     20 & 6.9 & 0.96 & 453\\
-     25 & 7.2 & 0.743 & 453\\
-    \bottomrule
-    \end{tabular}
-    }
-    \end{table}
 
-
-    
 %----- Sample Figure ----------%
 % \begin{figure}[!htbp]
 % \centering
@@ -95,7 +84,7 @@
 % \label{Fig1}
 % \end{figure}
 
-
+% Add in large transportation / offroad / capabilities with the pack tester. Future predictions (Rivian)
 
 
 
@@ -118,3 +107,4 @@
 
 
 \end{document}
+
